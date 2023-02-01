@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* Navbar */
+
+header .navbar-nav a {
+	font-family: "Quicksand";
+	margin: 0px 20px;
+}
+
+header .login {
+	color: white;
+	background-color: #11334d;
+
+	padding: 10px 50px;
+	border-radius: 10px;
+}
+
+/* ================= */
