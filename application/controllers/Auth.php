@@ -6,9 +6,13 @@ class Auth extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('M_auth');
+		// $this->load->model('M_auth');
 	}
 
+	public function login()
+	{
+		$this->load->view('auth/login');
+	}
 
 	public function aksi_login()
 	{
