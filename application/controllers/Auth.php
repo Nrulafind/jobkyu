@@ -3,13 +3,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Auth extends CI_Controller
 {
+	//load model auth login dan register semua role
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model('M_auth');
 	}
 
-
+	//login 
 	public function aksi_login()
 	{
 		$u = $this->input->post('username');
