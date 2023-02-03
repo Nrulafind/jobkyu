@@ -22,8 +22,13 @@ section .sidebar{
 }
 
 .sidebar-body ul li a{
-    color: white;
+    color: rgba(255, 255, 255, 0.210)!important;
     text-decoration: none;
+}
+
+.sidebar-body ul li.active a{
+    color: white!important;
+
 }
 
 .sidebar-footer{

@@ -4,18 +4,18 @@
         <hr style="color: white;">
     </div>
     <div class="sidebar-body text-light">
-        <ul>
-            <li>
-                <a href="#"><i class="fa-solid fa-gauge" style="margin-right: 20px;"></i>Dashboard</a>
+        <ul id="item-sidebar">
+            <li <?= $this->uri->segment(2) == 'dashboard' || $this->uri->segment(1) == '' ? 'class="active"' : ''?>>
+                <a href="<?= base_url('AdminPanel/dashboard');?>" type="button"><i class="fa-solid fa-gauge" style="margin-right: 20px;"></i>Dashboard</a>
             </li>
-            <li>
-                <a href="#"><i class="fa-solid fa-handshake" style="margin-right: 20px;"></i>Partners</a>
+            <li <?= $this->uri->segment(2) == 'partners' ? 'class="active"' : ''?>>
+                <a href="<?= base_url('AdminPanel/partners');?>" type="button"><i class="fa-solid fa-handshake" style="margin-right: 20px;"></i>Partners</a>
             </li>
-            <li>
-                <a href="#"><i class="fa-solid fa-newspaper" style="margin-right: 20px;"></i>Career articles</a>
+            <li <?= $this->uri->segment(2) == 'career'?>>
+                <a href="<?= base_url('');?>" type="button"><i class="fa-solid fa-newspaper" style="margin-right: 20px;"></i>Career articles</a>
             </li>
-            <li>
-                <a href="#"><i class="fa-solid fa-circle-info" style="margin-right: 20px;"></i>General Information</a>
+            <li <?= $this->uri->segment(2) == 'information'?>>
+                <a href="<?= base_url('');?>" type="button"><i class="fa-solid fa-circle-info" style="margin-right: 20px;"></i>General Information</a>
             </li>
         </ul>
     </div>

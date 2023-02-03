@@ -33,7 +33,7 @@
                                 <section class="top-content d-flex flex-column">
                                     <div class="d-flex justify-content-start mt-3">
                                         <p class="location text-light" style="background-color: #A06CD5; padding: 2px 15px;">Location</p>
-                                        <p class="ms-3" style="margin-top: 1q;">Admin - Dashboard</p>
+                                        <p class="ms-3" style="margin-top: 1q;">Admin - Partners</p>
                                         <div class="profile ms-auto">
                                             <p>Nickname</p>
                                         </div>
