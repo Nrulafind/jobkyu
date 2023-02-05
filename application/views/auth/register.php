@@ -33,7 +33,7 @@
                         <div class="d-flex flex-column">
                             <div class="d-flex justify-content-center">
                                 <form action="" method="post">
-                                    <div class="card mt-5 pb-3" style="width: 30rem; border-radius: 30px;">
+                                    <div class="card mt-3 pb-3" style="width: 30rem; border-radius: 30px;">
                                         <div class="card-title">
                                             <h3 class="ms-3 mt-4">Register</h3>
                                         </div>
@@ -42,6 +42,10 @@
                                             <div class="username">
                                                 <label for="username">Username</label> <br>
                                                 <input type="email" name="username" id="username">
+                                            </div>
+                                            <div class="email mt-3">
+                                                <label for="email">Email</label> <br>
+                                                <input type="email" name="email" id="email">
                                             </div>
                                             <div class="password mt-3">
                                                 <label for="password">Password</label> <br>
@@ -56,7 +60,7 @@
                             </div>
                             <div class="d-flex justify-content-center">
                                 <div class="more-control mt-3">
-                                    <p>have an account ? <a href="#" class="fw-bold ms-3">Login</a></p>
+                                    <p>have an account ? <a href="Login" class="fw-bold ms-3">Login</a></p>
                                 </div>
                             </div>
                         </div>

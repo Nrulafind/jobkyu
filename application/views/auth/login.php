@@ -32,7 +32,7 @@
                     <div class="container">
                         <div class="d-flex flex-column">
                             <div class="d-flex justify-content-center">
-                                <form action="" method="post">
+                                <form action="<?= base_url('aksi_login');?>" method="post">
                                     <div class="card mt-5 pb-3" style="width: 30rem; border-radius: 30px;">
                                         <div class="card-title">
                                             <h3 class="ms-3 mt-4">Login</h3>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="d-flex justify-content-center">
                                 <div class="more-control mt-3">
-                                    <p>don't have an account yet? <a href="#" class="fw-bold ms-3">Register</a></p>
+                                    <p>don't have an account yet? <a href="register" class="fw-bold ms-3">Register</a></p>
                                 </div>
                             </div>
                         </div>

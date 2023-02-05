@@ -32,7 +32,7 @@ class Auth extends CI_Controller
 				];
 
 				$this->session->set_userdata($data_session);
-				redirect('');
+				redirect('beranda');
 			}
 			if ($cek_role['id_role'] == 2) {
 				$data_session = [
