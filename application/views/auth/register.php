@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
+        <title><?= $title ?></title>
 
         <!-- CSS File -->
         <link rel="stylesheet" href="/assets/css/auth.css">
@@ -31,8 +31,11 @@
                 <section class="card-box mt-5">
                     <div class="container">
                         <div class="d-flex flex-column">
-                            <div class="d-flex justify-content-center">
-                                <form action="" method="post">
+                            <div class="d-flex justify-content-start">
+                                <div class="alert-text text-center mb-5" style="height: 70px;">
+                                    <?php echo $this->session->flashdata('message'); ?>
+                                </div>
+                                <form action="<?= base_url('Auth/aksi_daftar_user');?>" method="post">
                                     <div class="card mt-3 pb-3" style="width: 30rem; border-radius: 30px;">
                                         <div class="card-title">
                                             <h3 class="ms-3 mt-4">Register</h3>
@@ -41,7 +44,7 @@
                                         <div class="card-body ms-5">
                                             <div class="username">
                                                 <label for="username">Username</label> <br>
-                                                <input type="email" name="username" id="username">
+                                                <input type="text" name="username" id="username">
                                             </div>
                                             <div class="email mt-3">
                                                 <label for="email">Email</label> <br>

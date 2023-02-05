@@ -15,11 +15,11 @@
     </head>
     <body>
 
-        <header class="mt-3">
+        <header>
             <section class="top">
                 <div class="container">
                     <div class="d-flex justify-content-start">
-                        <h3 class="text-light">JobQ</h3>
+                        <h3 class="text-light mt-3">JobQ</h3>
                     </div>
                 </div>
             </section>
@@ -31,35 +31,29 @@
                 <section class="card-box mt-5">
                     <div class="container">
                         <div class="d-flex flex-column">
-                            <div class="d-flex justify-content-center">
+                            <div class="d-flex justify-content-start">
                                 <div class="alert-text text-center mb-5" style="height: 70px;">
                                     <?php echo $this->session->flashdata('message'); ?>
                                 </div>
                                 <form action="<?= base_url('Auth/aksi_login');?>" method="post">
-                                    <div class="card mt-5 pb-3" style="width: 30rem; border-radius: 30px;">
-                                        <div class="card-title">
-                                            <h3 class="ms-3 mt-4">Login</h3>
+                                    <div class="text-light">
+                                        <div class="email">
+                                            <label for="email">Email</label> <br>
+                                            <input type="email" name="email" id="email">
                                         </div>
-                                        <hr>
-                                        <div class="card-body ms-5">
-                                            <div class="email">
-                                                <label for="email">Email</label> <br>
-                                                <input type="email" name="email" id="email">
-                                            </div>
-                                            <div class="password mt-3">
-                                                <label for="password">Password</label> <br>
-                                                <input type="password" name="password" id="password">
-                                            </div>
-                                            <div class="button-control mt-5">
-                                                <button>Sign In</button>
-                                            </div>
+                                        <div class="password mt-3">
+                                            <label for="password">Password</label> <br>
+                                            <input type="password" name="password" id="password">
+                                        </div>
+                                        <div class="button-control mt-5">
+                                            <button>Sign In</button>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-                            <div class="d-flex justify-content-center">
-                                <div class="more-control mt-3">
-                                    <p>don't have an account yet? <a href="register" class="fw-bold ms-3">Register</a></p>
+                            <div class="d-flex justify-content-start">
+                                <div class="more-control mt-3 text-light">
+                                    <p>don't have an account yet? <a href="register" class="fw-bold ms-3 text-light">Register</a></p>
                                 </div>
                             </div>
                         </div>

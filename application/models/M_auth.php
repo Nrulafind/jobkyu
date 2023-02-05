@@ -10,9 +10,9 @@ class M_auth extends CI_Model
 	}
 
 	//cek user untuk register
-	public function cek_user($username)
+	public function cek_user($username, $email)
 	{
-		return $this->db->get_where('tbl_member', ['username' => $username])->row_array();
+		return $this->db->get_where('tbl_user', ['username' => $username, 'email' => $email])->row_array();
 	}
 
 	//cek mitra untuk register agar tidak ada data yang sama
