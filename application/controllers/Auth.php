@@ -12,56 +12,53 @@ class Auth extends CI_Controller
 	//login 
 	public function login()
 	{
-		$this->load->view('auth/login');
+		$data['title'] = 'Login - Jobkyu';
+		$this->load->view('auth/login', $data);
 	}
 
 	public function aksi_login()
 	{
-		$u = $this->input->post('username');
-		$p = $this->input->post('password');
-
-		$cek = $this->M_auth->cek_login($u, $p);
-		$cek_role = $this->M_auth->cek_role($u, $p);
-
-		if ($cek) {
-			if ($cek_role['id_role'] == 1) {
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+		
+		$user = $this->M_auth->cek_login($email);
+		if ($user) {
+			if (password_verify($password, $user['password'])) 
+			{
 				$data_session = [
-					'username' => $cek['username'],
-					'password' => $cek['password'],
-					'status' => 'login'
+					'email' => $user['email'],
+					'password' => $user['password'],
+					'status' => 'active'
 				];
-
 				$this->session->set_userdata($data_session);
-				redirect('beranda');
+				if ($user['id_role'] == 1 )
+				{
+					echo'login berhasil kamu adalah user';
+				}
+				else if ($user['id_role'] == 3 )
+				{
+					echo'login berhasil kamu adalah mitra';
+				}
+				else
+				{
+					echo'login berhasil kamu adalah Admin';
+				}
 			}
-			if ($cek_role['id_role'] == 2) {
-				$data_session = [
-					'username' => $cek['username'],
-					'password' => $cek['password'],
-					'status' => 'login'
-				];
-
-				$this->session->set_userdata($data_session);
-				redirect('');
-			}
-			if ($cek_role['id_role'] == 3) {
-				$data_session = [
-					'username' => $cek['username'],
-					'password' => $cek['password'],
-					'status' => 'login'
-				];
-
-				$this->session->set_userdata($data_session);
-				redirect('');
+			else 
+			{
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password Salah </div>');
+                redirect('Auth/Login');
 			}
 		} else {
-			redirect('');
+			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email belum terdaftar</div>');
+			redirect('Auth/login');
 		}
 	}
 
 	// Register
 	public function register()
 	{
+		$data['title'] = 'Register - Jobkyu';
 		$this->load->view('auth/register');
 	}
 	//function aksi untuk register data mitra ke database

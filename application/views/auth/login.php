@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
+        <title><?= $title ?></title>
 
         <!-- CSS File -->
         <link rel="stylesheet" href="/assets/css/auth.css">
@@ -32,6 +32,9 @@
                     <div class="container">
                         <div class="d-flex flex-column">
                             <div class="d-flex justify-content-center">
+                                <div class="alert-text text-center mb-5" style="height: 70px;">
+                                    <?php echo $this->session->flashdata('message'); ?>
+                                </div>
                                 <form action="<?= base_url('Auth/aksi_login');?>" method="post">
                                     <div class="card mt-5 pb-3" style="width: 30rem; border-radius: 30px;">
                                         <div class="card-title">
@@ -39,9 +42,9 @@
                                         </div>
                                         <hr>
                                         <div class="card-body ms-5">
-                                            <div class="username">
-                                                <label for="username">Username</label> <br>
-                                                <input type="email" name="username" id="username">
+                                            <div class="email">
+                                                <label for="email">Email</label> <br>
+                                                <input type="email" name="email" id="email">
                                             </div>
                                             <div class="password mt-3">
                                                 <label for="password">Password</label> <br>

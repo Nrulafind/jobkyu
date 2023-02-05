@@ -4,15 +4,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class M_auth extends CI_Model
 {
 	//cek login function
-	public function cek_login($u, $p)
+	public function cek_login($email)
 	{
-		return $this->db->get_where('tbl_user', ['userName' => $u, 'password' => $p])->row_array();
-	}
-
-	//cek role user yang akan login
-	public function cek_role($u, $p)
-	{
-		$this->db->get_where('tbl_user',  ['userName' => $u, 'password' => $p, 'id_role'])->row_array();
+		return $this->db->get_where('tbl_user', ['email' => $email])->row_array();
 	}
 
 	//cek user untuk register
