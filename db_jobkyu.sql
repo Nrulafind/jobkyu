@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2023 at 03:54 AM
+-- Generation Time: Feb 06, 2023 at 04:45 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -55,7 +55,7 @@ INSERT INTO `tbl_data_pelamar` (`id_data_pelamar`, `id_role`, `nama`, `umur`, `c
 
 CREATE TABLE `tbl_lowongan` (
   `id_lowongan` int(11) NOT NULL,
-  `id_role` int(11) DEFAULT NULL,
+  `id_user` int(11) NOT NULL,
   `deskripsi` varchar(500) DEFAULT NULL,
   `tgl_rilis` date DEFAULT NULL,
   `tgl_selesai` date DEFAULT NULL,
@@ -66,8 +66,8 @@ CREATE TABLE `tbl_lowongan` (
 -- Dumping data for table `tbl_lowongan`
 --
 
-INSERT INTO `tbl_lowongan` (`id_lowongan`, `id_role`, `deskripsi`, `tgl_rilis`, `tgl_selesai`, `posisi`) VALUES
-(1, 3, 'aku tau kamu tau pasti bingun sama saya juga', '2023-02-01', '2023-02-11', 'Vice President');
+INSERT INTO `tbl_lowongan` (`id_lowongan`, `id_user`, `deskripsi`, `tgl_rilis`, `tgl_selesai`, `posisi`) VALUES
+(1, 1, 'aku tau kamu tau pasti bingun sama saya juga', '2023-02-01', '2023-02-11', 'Vice President');
 
 -- --------------------------------------------------------
 
@@ -184,7 +184,7 @@ ALTER TABLE `tbl_data_pelamar`
 --
 ALTER TABLE `tbl_lowongan`
   ADD PRIMARY KEY (`id_lowongan`),
-  ADD KEY `id_role` (`id_role`);
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indexes for table `tbl_melamar`
@@ -275,7 +275,7 @@ ALTER TABLE `tbl_data_pelamar`
 -- Constraints for table `tbl_lowongan`
 --
 ALTER TABLE `tbl_lowongan`
-  ADD CONSTRAINT `tbl_lowongan_ibfk_1` FOREIGN KEY (`id_role`) REFERENCES `tbl_role` (`id_role`);
+  ADD CONSTRAINT `tbl_lowongan_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tbl_user` (`id_user`);
 
 --
 -- Constraints for table `tbl_melamar`
