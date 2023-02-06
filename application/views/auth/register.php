@@ -15,11 +15,12 @@
     </head>
     <body>
 
-        <header class="mt-3">
+        <header>
             <section class="top">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="d-flex justify-content-start">
-                        <h3 class="text-light">JobQ</h3>
+                        <h3 class="text-light mt-4 ms-4">JobQ</h3>
+                        <p class="ms-auto mt-4 me-4">Are you the owner of the company?<a href="#" class="fw-bold ms-2" style="color: black; text-decoration: none;">Register</a></p>
                     </div>
                 </div>
             </section>
@@ -28,42 +29,50 @@
         <!-- Card Box Start -->
 
             <main>
-                <section class="card-box mt-5">
-                    <div class="container">
-                        <div class="d-flex flex-column">
-                            <div class="d-flex justify-content-start">
-                                <div class="alert-text text-center mb-5" style="height: 70px;">
-                                    <?php echo $this->session->flashdata('message'); ?>
-                                </div>
-                                <form action="<?= base_url('Auth/aksi_daftar_user');?>" method="post">
-                                    <div class="card mt-3 pb-3" style="width: 30rem; border-radius: 30px;">
-                                        <div class="card-title">
-                                            <h3 class="ms-3 mt-4">Register</h3>
-                                        </div>
-                                        <hr>
-                                        <div class="card-body ms-5">
+                <section class="login-body">
+                    <div class="container-fluid">
+                        <div class="d-flex justify-content-start">
+                            <div class="left-side">
+                                <!-- Accessories Start -->
+
+                                <section class="accessories">
+                                    <div class="position-relative">
+                                        <div class="rect-1 position-absolute"></div>
+                                    </div>
+                                </section>
+
+                                <!-- Accessories End -->
+                                <div class="form-body">
+                                    <form action="<?= base_url('Auth/aksi_daftar_user');?>" method="post">
+                                        <div class="text-light form-register">
                                             <div class="username">
                                                 <label for="username">Username</label> <br>
-                                                <input type="text" name="username" id="username">
+                                                <input type="username" name="username" id="username" required>
                                             </div>
                                             <div class="email mt-3">
                                                 <label for="email">Email</label> <br>
-                                                <input type="email" name="email" id="email">
+                                                <input type="email" name="email" id="email" required>
                                             </div>
                                             <div class="password mt-3">
                                                 <label for="password">Password</label> <br>
-                                                <input type="password" name="password" id="password">
+                                                <input type="password" name="password" id="password" required>
                                             </div>
                                             <div class="button-control mt-5">
-                                                <button>Sign Up</button>
+                                                <button>Sign In</button>
                                             </div>
                                         </div>
+                                    </form>
+                                    <div class="more-control-register text-light">
+                                        <p>Have an account? <a href="register" class="fw-bold ms-3 text-light">Sign In</a></p>
                                     </div>
-                                </form>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-center">
-                                <div class="more-control mt-3">
-                                    <p>have an account ? <a href="Login" class="fw-bold ms-3">Login</a></p>
+                            <div class="divider"></div>
+                            <div class="right-side">
+                                <div class="d-flex justify-content-start">
+                                    <div class="alert-text text-center mb-5">
+                                        <?php echo $this->session->flashdata('message'); ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -73,14 +82,5 @@
 
         <!-- Card Box Start -->
 
-        <!-- Accessories Start -->
-
-            <section class="accessories">
-                <div class="position-relative">
-                    <div class="rect-1 position-absolute"></div>
-                </div>
-            </section>
-
-        <!-- Accessories End -->
     </body>
 </html>

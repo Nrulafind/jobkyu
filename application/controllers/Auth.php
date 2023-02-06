@@ -51,7 +51,7 @@ class Auth extends CI_Controller
 			}
 			else 
 			{
-				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password Salah </div>');
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password Salah</div>');
                 redirect('Auth/Login');
 			}
 		} else {
@@ -103,6 +103,7 @@ class Auth extends CI_Controller
 
 		$username = $this->input->post('username');
 		$email = $this->input->post('email');
+		$password = $this->input->post('password');
 
 		$user = $this->M_auth->cek_user($username, $email);
 
