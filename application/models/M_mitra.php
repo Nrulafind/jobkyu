@@ -6,9 +6,8 @@ class M_mitra extends CI_Model
 	public function getAll()
 	{
 		$id = $this->session->userdata('email');
-		$this->db->join('user', 'user.id_user = event.id_user');
+		$this->db->join('tbl_user', 'tbl_user.id_user = tbl_lowongan.id_user');
 		$this->db->where('email', $id);
-		return $this->db->get($this->_table)->result();
 	}
 
 	function insert_lowongan($table, $data)

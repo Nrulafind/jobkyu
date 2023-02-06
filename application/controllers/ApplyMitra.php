@@ -39,10 +39,10 @@ class ApplyMitra extends CI_Controller
 		if ($this->session->status != 'admin') {
 			redirect('');
 		}
-		$nama = $this->input->post('nama');
-		$mapel = $this->input->post('mapel');
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
+		$ = $this->input->post('');
+		$ = $this->input->post('');
+		$ = $this->input->post('');
+		$ = $this->input->post('');
 		$where = array('' => $id);
 		$data = array(
 			'nama' => $nama,
