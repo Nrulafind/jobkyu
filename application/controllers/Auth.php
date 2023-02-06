@@ -67,6 +67,12 @@ class Auth extends CI_Controller
 		$this->load->view('auth/register', $data);
 	}
 
+	public function registerMitra()
+	{
+		$data['title'] = 'Register - Jobkyu';
+		$this->load->view('auth/registerMitra', $data);
+	}
+
 	//function aksi untuk register data mitra ke database
 	public function aksi_daftar_mitra()
 	{
