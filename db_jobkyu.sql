@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2023 at 03:20 AM
+-- Generation Time: Feb 06, 2023 at 03:54 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -97,7 +97,6 @@ INSERT INTO `tbl_melamar` (`id_melamar`, `id_data_pelamar`, `id_lowongan`, `CV`)
 
 CREATE TABLE `tbl_mitra` (
   `id_mitra` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL,
   `id_lowongan` int(11) NOT NULL,
   `nama_perusahaan` varchar(255) NOT NULL,
   `alamat_perusahaan` varchar(255) NOT NULL,
@@ -200,7 +199,6 @@ ALTER TABLE `tbl_melamar`
 --
 ALTER TABLE `tbl_mitra`
   ADD PRIMARY KEY (`id_mitra`),
-  ADD KEY `id_user` (`id_user`,`id_lowongan`),
   ADD KEY `id_lowongan` (`id_lowongan`);
 
 --
@@ -290,7 +288,6 @@ ALTER TABLE `tbl_melamar`
 -- Constraints for table `tbl_mitra`
 --
 ALTER TABLE `tbl_mitra`
-  ADD CONSTRAINT `tbl_mitra_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `tbl_user` (`id_user`),
   ADD CONSTRAINT `tbl_mitra_ibfk_2` FOREIGN KEY (`id_lowongan`) REFERENCES `tbl_lowongan` (`id_lowongan`);
 
 --
