@@ -20,7 +20,7 @@
                 <div class="container-fluid">
                     <div class="d-flex justify-content-start">
                         <h3 class="text-light mt-4 ms-4">JobQ</h3>
-                        <p class="ms-auto mt-4 me-4">Are you the owner of the company?<a href="RegisterMitra" class="fw-bold ms-2" style="color: black; text-decoration: none;">Register</a></p>
+                        <p class="ms-auto mt-4 me-4">Are you a job seeker ?<a href="/Auth/Login" class="fw-bold ms-2" style="color: black; text-decoration: none;">Login</a></p>
                     </div>
                 </div>
             </section>
@@ -44,10 +44,14 @@
                                 <!-- Accessories End -->
                                 <div class="form-body">
                                     <form action="<?= base_url('Auth/aksi_daftar_user');?>" method="post">
-                                        <div class="text-light form-register">
+                                        <div class="text-light form-registerMitra">
                                             <div class="username">
                                                 <label for="username">Username</label> <br>
                                                 <input type="text" name="username" id="username" required>
+                                            </div>
+                                            <div class="nama mt-3">
+                                                <label for="nama_bisnis">Business name</label> <br>
+                                                <input type="text" name="nama_bisnis" id="nama_bisnis" required>
                                             </div>
                                             <div class="email mt-3">
                                                 <label for="email">Email</label> <br>
@@ -58,7 +62,7 @@
                                                 <input type="password" name="password" id="password" required>
                                             </div>
                                             <div class="button-control mt-5">
-                                                <button>Sign In</button>
+                                                <button>Sign Up</button>
                                             </div>
                                         </div>
                                     </form>
