@@ -6,7 +6,6 @@ class M_mitra extends CI_Model
 	public function getAll()
 	{
 		$id = $this->session->userdata('email');
-		$this->db->from('event');
 		$this->db->join('user', 'user.id_user = event.id_user');
 		$this->db->where('email', $id);
 		return $this->db->get($this->_table)->result();
