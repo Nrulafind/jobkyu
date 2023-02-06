@@ -10,6 +10,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
         <!-- JS File -->
+        <script src="/assets/js/alert.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     </head>
@@ -17,9 +18,9 @@
 
         <header>
             <section class="top">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="d-flex justify-content-start">
-                        <h3 class="text-light mt-3">JobQ</h3>
+                        <h3 class="text-light mt-4 ms-4">JobQ</h3>
                     </div>
                 </div>
             </section>
@@ -28,32 +29,46 @@
         <!-- Card Box Start -->
 
             <main>
-                <section class="card-box mt-5">
-                    <div class="container">
-                        <div class="d-flex flex-column">
-                            <div class="d-flex justify-content-start">
-                                <div class="alert-text text-center mb-5" style="height: 70px;">
-                                    <?php echo $this->session->flashdata('message'); ?>
-                                </div>
-                                <form action="<?= base_url('Auth/aksi_login');?>" method="post">
-                                    <div class="text-light">
-                                        <div class="email">
-                                            <label for="email">Email</label> <br>
-                                            <input type="email" name="email" id="email">
-                                        </div>
-                                        <div class="password mt-3">
-                                            <label for="password">Password</label> <br>
-                                            <input type="password" name="password" id="password">
-                                        </div>
-                                        <div class="button-control mt-5">
-                                            <button>Sign In</button>
-                                        </div>
+                <section class="login-body">
+                    <div class="container-fluid">
+                        <div class="d-flex justify-content-start">
+                            <div class="left-side">
+                                <!-- Accessories Start -->
+
+                                <section class="accessories">
+                                    <div class="position-relative">
+                                        <div class="rect-1 position-absolute"></div>
                                     </div>
-                                </form>
+                                </section>
+
+                                <!-- Accessories End -->
+                                <div class="form-body">
+                                    <form action="<?= base_url('Auth/aksi_login');?>" method="post">
+                                        <div class="text-light form">
+                                            <div class="email">
+                                                <label for="email">Email</label> <br>
+                                                <input type="email" name="email" id="email" required>
+                                            </div>
+                                            <div class="password mt-3">
+                                                <label for="password">Password</label> <br>
+                                                <input type="password" name="password" id="password" required>
+                                            </div>
+                                            <div class="button-control mt-5">
+                                                <button>Sign In</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="more-control text-light">
+                                        <p>don't have an account yet? <a href="register" class="fw-bold ms-3 text-light">Register</a></p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="d-flex justify-content-start">
-                                <div class="more-control mt-3 text-light">
-                                    <p>don't have an account yet? <a href="register" class="fw-bold ms-3 text-light">Register</a></p>
+                            <div class="divider"></div>
+                            <div class="right-side">
+                                <div class="d-flex justify-content-start">
+                                    <div class="alert-text text-center mb-5">
+                                        <?php echo $this->session->flashdata('message'); ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -63,14 +78,7 @@
 
         <!-- Card Box Start -->
 
-        <!-- Accessories Start -->
 
-            <section class="accessories">
-                <div class="position-relative">
-                    <div class="rect-1 position-absolute"></div>
-                </div>
-            </section>
 
-        <!-- Accessories End -->
     </body>
 </html>
