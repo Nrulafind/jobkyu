@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
+        <title><?= $title?></title>
         
         <!-- CSS File -->
         <link rel="stylesheet" href="/assets/css/sidebarMitra.css">
@@ -33,7 +33,7 @@
                                 <section class="top-content d-flex flex-column">
                                     <div class="d-flex justify-content-start mt-3">
                                         <p class="location text-light" style="background-color: #A06CD5; padding: 2px 15px;">Location</p>
-                                        <p class="ms-3" style="margin-top: 1q;">Mitra - Dashboard</p>
+                                        <p class="ms-3" style="margin-top: 1q;">Mitra - General Information</p>
                                         <div class="profile ms-auto">
                                             <p>Nickname</p>
                                         </div>
@@ -41,16 +41,32 @@
                                     <hr style="width: 150vh; margin-top: 5px;">
                                 </section>
                                 <section class="body-content">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="card me-3 mt-3" style="width: 18rem;">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                                <p class="card-text">Some quick example text to build on the card title and make
-                                                    up the bulk of the card's content.</p>
-                                                <a href="#" class="card-link">Card link</a>
-                                                <a href="#" class="card-link">Another link</a>
+                                    <div class="d-flex justify-content-start">
+                                        <div class="information-account mt-3">
+                                            <p class="text-muted" style="font-size: 12px;">Account Information</p>
+                                            <div class="card" style="width: 20rem;">
+                                                <div class="card-body">
+                                                    <div class="name">
+                                                        <h6>Name</h6>
+                                                        <input type="text" disabled="disabled" value="Anjay">
+                                                    </div>
+                                                    <div class="email mt-2">
+                                                        <h6>Email</h6>
+                                                        <input type="text" disabled="disabled" value="Anjay">
+                                                    </div>
+                                                    <div class="address mt-2">
+                                                        <h6>Address</h6>
+                                                        <input type="text" disabled="disabled" value="Anjay">
+                                                    </div>
+                                                    <div class="sex mt-2">
+                                                        <h6>Sex</h6>
+                                                        <input type="text" disabled="disabled" value="Anjay">
+                                                    </div>
+                                                </div>
                                             </div>
+                                        </div>
+                                        <div class="business-information mt-3">
+                                            <p class="text-muted" style="font-size: 12px;">Business Information</p>
                                         </div>
                                     </div>
                                 </section>
