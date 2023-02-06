@@ -37,7 +37,7 @@ body{
 }
 
 .form-registerMitra{
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 input{
@@ -66,11 +66,19 @@ input{
     margin-top: 100px;
 }
 
+.more-control-registerMitra{
+    margin-top: 145px;
+}
+
 .more-control a{
     text-decoration: none;
 }
 
 .more-control-register a{
+    text-decoration: none;
+}
+
+.more-control-registerMitra a{
     text-decoration: none;
 }
 

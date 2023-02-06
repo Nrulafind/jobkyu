@@ -77,26 +77,25 @@ class Auth extends CI_Controller
 	public function aksi_daftar_mitra()
 	{
 		$username = $this->input->post('username');
-		$mitra = $this->M_auth->cek_user($username);
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+
+		$mitra = $this->M_auth->cek_user($email, $username);
 
 		if ($mitra) {
-			$this->session->set_flashdata('error', '<b>Username</b> ini sudah terdaftar!');
-			redirect('');
+			$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email / Business name Already Used.</div>');
+			redirect('Auth/RegisterMitra');
 		} else {
 			$data = [
 				'username' => $this->input->post('username'),
-				'password' => $this->input->post('password'),
-				'namaKonsumen' => $this->input->post('namaKonsumen'),
-				'alamat' => $this->input->post('alamat'),
-				'idKota' => $this->input->post('idKota'),
 				'email' => $this->input->post('email'),
-				'tlpn' => $this->input->post('tlpn'),
+				'password' => password_hash ($this->input->post('password'), PASSWORD_DEFAULT),
 				'id_role' => 3
 			];
 
-			$this->M_auth->insert_mitra('tbl_user', $data);
-			$this->session->set_flashdata('success', '<b>Berhasil</b>. Akun Anda telah terdaftar');
-			redirect('');
+			$this->M_auth->insert_mitra('tbl_user',$data);
+			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Successfully registered an account.</div>');
+			redirect('Auth/login');
 		}
 	}
 

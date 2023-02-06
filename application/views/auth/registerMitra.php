@@ -43,15 +43,11 @@
 
                                 <!-- Accessories End -->
                                 <div class="form-body">
-                                    <form action="<?= base_url('Auth/aksi_daftar_user');?>" method="post">
+                                    <form action="<?= base_url('Auth/aksi_daftar_mitra');?>" method="post">
                                         <div class="text-light form-registerMitra">
                                             <div class="username">
                                                 <label for="username">Username</label> <br>
                                                 <input type="text" name="username" id="username" required>
-                                            </div>
-                                            <div class="nama mt-3">
-                                                <label for="nama_bisnis">Business name</label> <br>
-                                                <input type="text" name="nama_bisnis" id="nama_bisnis" required>
                                             </div>
                                             <div class="email mt-3">
                                                 <label for="email">Email</label> <br>
@@ -66,7 +62,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <div class="more-control-register text-light">
+                                    <div class="more-control-registerMitra text-light">
                                         <p>Have an account? <a href="Login" class="fw-bold ms-3 text-light">Sign In</a></p>
                                     </div>
                                 </div>

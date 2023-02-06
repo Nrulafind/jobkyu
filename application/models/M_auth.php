@@ -16,15 +16,15 @@ class M_auth extends CI_Model
 	}
 
 	//cek mitra untuk register agar tidak ada data yang sama
-	public function cek_mitra($username)
+	public function cek_mitra($username, $email)
 	{
-		return $this->db->get_where('tbl_member', ['username' => $username])->row_array();
+		return $this->db->get_where('tbl_user', ['username' => $username, 'email' => $email])->row_array();
 	}
 
 	//function untuk melakukan insert data register mitra
-	public function insert_mitra($tabel, $data)
+	public function insert_mitra($table, $data)
 	{
-		$this->db->insert($tabel, $data);
+		$this->db->insert($table, $data);
 	}
 	
 	//function untuk melakukan insert data register user
