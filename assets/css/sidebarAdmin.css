@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+*{
+    font-family: 'Quicksand';
+}
+
+/* Sidebar */
+
+section .sidebar{
+    background-color: #102B3F;
+    width: 15em;
+    height: 100vh;
+}
+
+.sidebar-body{
+    margin-top: 75px;
+}
+
+.sidebar-body ul li{
+    list-style: none;
+    padding: 20px 0px;
+}
+
+.sidebar-body ul li a{
+    color: rgba(255, 255, 255, 0.210)!important;
+    text-decoration: none;
+}
+
+.sidebar-body ul li.active a{
+    color: white!important;
+
+}
+
+.sidebar-footer{
+    margin-top: 12em;
+}
+
+
+/* ========== */
