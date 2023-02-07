@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+	font-family: 'Quicksand';
+
+}
+
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* Card Box */
+.left-side{
+    width: 48em;
+}
+
+.divider{
+    width: 5em;
+}
+
+.right-side{
+    border: 1px solid black;
+    width: 100%;
+}
+
+.form-body{
+    margin-left: 65px;
+}
+
+.form{
+    margin-top: 10rem;
+}
+
+.form-register{
+    margin-top: 10rem;
+}
+
+.form-registerMitra{
+    margin-top: 7rem;
+}
+
+input{
+    margin-top: 5px;
+    width: 20rem;
+
+    border-radius: 25px;
+}
+
+.button-control button{
+    border: none;
+    outline: none;
+    border-radius: 20px;
+
+    color: white;
+    background-color: #6247AA;
+
+    padding: 5px 8.5rem;
+}
+
+.more-control{
+    margin-top: 175px;
+}
+
+.more-control-register{
+    margin-top: 100px;
+}
+
+.more-control-registerMitra{
+    margin-top: 145px;
+}
+
+.more-control a{
+    text-decoration: none;
+}
+
+.more-control-register a{
+    text-decoration: none;
+}
+
+.more-control-registerMitra a{
+    text-decoration: none;
+}
+
+.alert-text{
+    width: 100%;
+    height: 70px;
+
+}
+/* ========== */
+
+/* Accessories */
+
+.rect-1{
+    z-index: -1;
+
+    top: -10em;
+    left: -100px;
+    width: 35rem;
+    height: 150vh;
+
+    background-color: #102B3F;
+    /* border: 1px solid black; */
+}
+
+/* ========== */

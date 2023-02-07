@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
+* {
+	font-family: 'Quicksand';
+}
+
 /* Navbar */
 
 header .navbar-nav a {
@@ -8,11 +12,34 @@ header .navbar-nav a {
 }
 
 header .login {
-	color: white;
-	background-color: #11334d;
+	color: black;
+	background-color: #eeeeee;
 
-	padding: 10px 50px;
+	padding: 5px 25px;
 	border-radius: 10px;
 }
 
+/* ================= */
+
+/* Slider */
+
+.slider img {
+	width: 1250px;
+	height: 250px;
+
+	border-radius: 25px;
+}
+
+/* ================= */
+
+/* Job Cluster */
+
+.JobsCluster a {
+	color: black;
+	text-decoration: none;
+}
+
+.JobsCluster .card .position {
+	color: #6247AA!important;
+}
 /* ================= */
