@@ -12,7 +12,7 @@
 						<a class="nav-link text-light" href="#">My Job</a>
 						<a class="nav-link text-light" href="#">Career Tips</a>
 					</div>
-					<a class="nav-link login">Login</a>
+					<a class="nav-link login fw-bold" href="#">Login</a>
 				</div>
 			</div>
 		</nav>

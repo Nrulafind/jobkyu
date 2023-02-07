@@ -50,5 +50,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'homepage';
+
+// Mitra
+$route['Mitra/Dashboard'] = 'MitraPanel/dashboard';
+$route['Mitra/Vacancies'] = 'MitraPanel/vacancies';
+$route['Mitra/GeneralInformation'] = 'MitraPanel/general';
+
 $route['404_override'] = '';
+
+// Auth
+$route['Login'] = 'auth/login';
+$route['Register'] = 'auth/register';
+$route['RegisterMitra'] = 'auth/registerMitra';
+
 $route['translate_uri_dashes'] = FALSE;
