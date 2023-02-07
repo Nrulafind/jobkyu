@@ -53,6 +53,7 @@ $route['default_controller'] = 'homepage';
 
 // Mitra
 $route['Mitra/Dashboard'] = 'MitraPanel/dashboard';
+$route['Mitra/Vacancies'] = 'MitraPanel/vacancies';
 $route['Mitra/GeneralInformation'] = 'MitraPanel/general';
 
 $route['404_override'] = '';

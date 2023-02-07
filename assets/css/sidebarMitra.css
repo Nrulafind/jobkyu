@@ -18,7 +18,7 @@ section .sidebar{
 
 .sidebar-body ul li{
     list-style: none;
-    padding: 20px 0px;
+    padding: 30px 0px;
 }
 
 .sidebar-body ul li a{
@@ -32,7 +32,7 @@ section .sidebar{
 }
 
 .sidebar-footer{
-    margin-top: 12em;
+    margin-top: 13em;
 }
 
 

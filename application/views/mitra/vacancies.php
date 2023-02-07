@@ -33,7 +33,7 @@
                                 <section class="top-content d-flex flex-column">
                                     <div class="d-flex justify-content-start mt-3">
                                         <p class="location text-light" style="background-color: #A06CD5; padding: 2px 15px;">Location</p>
-                                        <p class="ms-3" style="margin-top: 1q;">Mitra - Dashboard</p>
+                                        <p class="ms-3" style="margin-top: 1q;">Mitra - Job Vacancies</p>
                                         <div class="profile ms-auto">
                                             <p>Nickname</p>
                                         </div>
@@ -42,14 +42,14 @@
                                 </section>
                                 <section class="body-content">
                                     <div class="d-flex flex-wrap">
-                                        <div class="card me-3 mt-3" style="width: 18rem;">
+                                        <div class="card mt-3 me-3" style="width: 18rem;">
                                             <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
-                                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                                <p class="card-text">Some quick example text to build on the card title and make
-                                                    up the bulk of the card's content.</p>
-                                                <a href="#" class="card-link">Card link</a>
-                                                <a href="#" class="card-link">Another link</a>
+                                                <h5 class="card-title">Graphic Designer</h5>
+                                                <div class="d-flex justify-content-start">
+                                                    <p>Total Application :</p>
+                                                    <p>32</p>
+                                                </div>
+                                                <a href="#">List of registrants</a>
                                             </div>
                                         </div>
                                     </div>

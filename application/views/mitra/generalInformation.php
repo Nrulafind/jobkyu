@@ -65,8 +65,24 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="business-information mt-3">
+                                        <div class="business-information mt-3 ms-5">
                                             <p class="text-muted" style="font-size: 12px;">Business Information</p>
+                                            <div class="card" style="width: 20rem;">
+                                                <div class="card-body">
+                                                    <div class="name">
+                                                        <h6>Company Name</h6>
+                                                        <input type="text" disabled="disabled" value="Anjay">
+                                                    </div>
+                                                    <div class="email mt-2">
+                                                        <h6>Company Address</h6>
+                                                        <input type="text" disabled="disabled" value="Anjay">
+                                                    </div>
+                                                    <div class="address mt-2">
+                                                        <h6>About Company</h6>
+                                                        <input type="text" disabled="disabled" value="Anjay">
+                                                    </div>
+                                                </div>
+                                            </div>  
                                         </div>
                                     </div>
                                 </section>
