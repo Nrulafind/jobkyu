@@ -63,6 +63,7 @@
                                                         <input type="text" disabled="disabled" value="Anjay">
                                                     </div>
                                                 </div>
+                                                <a href="" class="ms-auto">Edit</a>gitu
                                             </div>
                                         </div>
                                         <div class="business-information mt-3 ms-5">
