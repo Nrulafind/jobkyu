@@ -33,11 +33,9 @@ class AdminPanel extends CI_Controller
 	if ($this->session->status != '') {
 		redirect('');
 	}
-	$data['title'] = 'Siswa';
-	$data['siswa'] = $this->m_admin->list_siswa()->result();
-	$data['listkelas'] = $this->m_admin->list_kelas()->result();
+	$data['siswa'] = $this->m_admin->list_lowongan()->result();
+	$data['listkelas'] = $this->m_admin->list_pelamar()->result();
 
-	$this->header($data);
 	$this->load->view('');
 	$this->load->view('');
 }
